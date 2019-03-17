@@ -1,0 +1,6 @@
+c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_3\bin\Debug\ASD_PartTime_3.exe.config
+c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_3\bin\Debug\ASD_PartTime_3.exe
+c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_3\bin\Debug\ASD_PartTime_3.pdb
+c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_3\obj\Debug\ASD_PartTime_3.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_3\obj\Debug\ASD_PartTime_3.exe
+c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_3\obj\Debug\ASD_PartTime_3.pdb
