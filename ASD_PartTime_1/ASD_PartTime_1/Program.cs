@@ -131,6 +131,81 @@ namespace ASD_PartTime_1
             }
         }
 
+        // Eratosten
+
+        static void Eratosten(int n)
+        {
+            bool[] e = new bool[n]; //by default they're all false
+            for (int i = 2; i < n; i++)
+            {
+                e[i] = true;//set all numbers to true
+            }
+
+            //weed out the non primes by finding mutiples 
+            for (int j = 2; j < n; j++)
+            {
+                if (e[j])//is true
+                {
+                    for (int p = 2; (p * j) < n; p++)
+                    {
+                        e[p * j] = false;
+                    }
+                }
+            }
+
+            for (int i = 0; i < e.Length; i++)
+            {
+                Console.WriteLine(i + " = " + e[i]);
+            }
+
+        }
+
+        // NOD
+
+        static int GCDRecursive(int a, int b)
+        {
+            Console.WriteLine("a = {0}, b = {1}", a, b);
+
+            if (a == 0)
+                return b;
+            if (b == 0)
+                return a;
+
+            if (a > b)
+                return GCDRecursive(a % b, b);
+            else
+                return GCDRecursive(a, b % a);
+        }
+
+        static int GCD(int a, int b)
+        {
+            while (a != 0 && b != 0)
+            {
+                if (a > b)
+                    a %= b;
+                else
+                    b %= a;
+            }
+
+            if (a == 0)
+                return b;
+            else
+                return a;
+        }
+
+        // Hanoi
+
+        private static void solveTowers(int n, char startPeg, char endPeg, char tempPeg)
+        {
+            if (n > 0)
+            {
+                solveTowers(n - 1, startPeg, tempPeg, endPeg);
+                Console.WriteLine("Move disk from " + startPeg + ' ' + endPeg);
+                solveTowers(n - 1, tempPeg, endPeg, startPeg);
+
+            }
+        }
+
         // Sentences count
         static int SentencesCount(string text)
         {
@@ -197,7 +272,25 @@ namespace ASD_PartTime_1
 
         static void Main(string[] args)
         {
-            Console.WriteLine(SentencesCount("dfgdfg fdgdfg dfgdf. fdsfsdfsd. fsdfsdfsdfd dsfsdfsdfds."));
+            //Console.WriteLine(SentencesCount("dfgdfg fdgdfg dfgdf. fdsfsdfsd. fsdfsdfsdfd dsfsdfsdfds."));
+
+            //Eratosten(100);
+
+            Console.WriteLine(GCDRecursive(30, 12));
+            Console.WriteLine(GCD(30, 12));
+
+
+            // Hanoi
+
+            char startPeg = 'A'; // start tower in output
+            char endPeg = 'C'; // end tower in output
+            char tempPeg = 'B'; // temporary tower in output
+            int totalDisks = 3; // number of disks
+
+            solveTowers(totalDisks, startPeg, endPeg, tempPeg);
+
+
+            Console.ReadKey();
         }
     }
 }
