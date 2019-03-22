@@ -1,6 +1,0 @@
-c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_1\bin\Debug\ASD_PartTime_1.exe.config
-c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_1\obj\Debug\ASD_PartTime_1.csprojResolveAssemblyReference.cache
-c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_1\bin\Debug\ASD_PartTime_1.exe
-c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_1\bin\Debug\ASD_PartTime_1.pdb
-c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_1\obj\Debug\ASD_PartTime_1.exe
-c:\users\user\documents\visual studio 2013\Projects\ASD_PartTime_1\ASD_PartTime_1\obj\Debug\ASD_PartTime_1.pdb
