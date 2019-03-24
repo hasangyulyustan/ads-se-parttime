@@ -9,29 +9,29 @@ namespace ASD_PartTime_1
     class Program
     {
 
-        static void ShellSort(int[] arr, int n)
+        private void ShellSort(int[] array)
         {
-            int i, j, pos, temp;
-            pos = 3;
-            while (pos > 0)
+            int n = array.Length;
+            int gap = n / 2;
+            int temp;
+
+            while (gap > 0)
             {
-                for (i = 0; i < n; i++)
+                for (int i = 0; i + gap < n; i++)
                 {
-                    j = i;
-                    temp = arr[i];
-                    while ((j >= pos) && (arr[j - pos] > temp))
+                    int j = i + gap;
+                    temp = array[j];
+
+                    while (j - gap >= 0 && temp < array[j - gap])
                     {
-                        arr[j] = arr[j - pos];
-                        j = j - pos;
+                        array[j] = array[j - gap];
+                        j = j - gap;
                     }
-                    arr[j] = temp;
+
+                    array[j] = temp;
                 }
-                if (pos / 2 != 0)
-                    pos = pos / 2;
-                else if (pos == 1)
-                    pos = 0;
-                else
-                    pos = 1;
+
+                gap = gap / 2;
             }
         }
 
@@ -87,7 +87,8 @@ namespace ASD_PartTime_1
                 QuickSort(arr, i + 1, end);
             }
         }
-
+        //{ 5, 3, 1, 7, 0, 9, 6, 2 }
+        //{ 1, 0, 2, 7, 3, 9, 6, 5 }
         static int Partition(int[] arr, int start, int end)
         {
             int temp;
@@ -288,6 +289,18 @@ namespace ASD_PartTime_1
             int totalDisks = 3; // number of disks
 
             solveTowers(totalDisks, startPeg, endPeg, tempPeg);
+
+
+            int[] arr = { 5, 3, 1, 7, 0, 9, 6, 2 };
+
+            int j = Partition(arr, 0, 7);
+
+            Console.WriteLine("j = " + j);
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
 
 
             Console.ReadKey();
